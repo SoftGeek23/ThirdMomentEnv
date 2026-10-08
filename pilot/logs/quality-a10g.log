@@ -1,0 +1,25 @@
+✓ Initialized. View run at 
+https://modal.com/apps/softgeek23/main/ap-VxaWU2Scg1oQ3frUmoqUmJ
+✓ Created objects.
+├── ✓ Uploaded /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/ref_experiment.py
+├── ✓ Created Function quality.
+└── ✓ Created Function evaluate.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[fused-int8] QUALITY {"variant": "fused-int8", "n": {"wikitext": 128, "mbpp": 123, "gsm8k": 128}, "dnll": {"wikitext": 0.03659169003367424, "mbpp": 0.014308717677263709, "gsm8k": 0.0196151458658278}}
+[hf-int8] QUALITY {"variant": "hf-int8", "n": {"wikitext": 128, "mbpp": 123, "gsm8k": 128}, "dnll": {"wikitext": 0.03296288289129734, "mbpp": 0.018035066321613342, "gsm8k": 0.02035042131319642}}
+`torch_dtype` is deprecated! Use `dtype` instead!
+[fused-int8-sq0.65] QUALITY {"variant": "fused-int8-sq0.65", "n": {"wikitext": 128, "mbpp": 123, "gsm8k": 128}, "dnll": {"wikitext": 0.013042823411524296, "mbpp": -0.0036985307205014114, "gsm8k": -0.016320979921147227}}
+[fused-int8-sq0.5] QUALITY {"variant": "fused-int8-sq0.5", "n": {"wikitext": 128, "mbpp": 123, "gsm8k": 128}, "dnll": {"wikitext": 0.01157755684107542, "mbpp": -0.0007598480073417105, "gsm8k": 0.010072901146486402}}
+[fused-int8-sq0.8] QUALITY {"variant": "fused-int8-sq0.8", "n": {"wikitext": 128, "mbpp": 123, "gsm8k": 128}, "dnll": {"wikitext": 0.018370453268289566, "mbpp": 0.000883382510363571, "gsm8k": -0.024105070624500513}}
+| variant | dNLL wikitext | mbpp | gsm8k | n |
+|---|---|---|---|---|
+| hf-int8 | +0.0330 | +0.0180 | +0.0204 | {'wikitext': 128, 'mbpp': 123, 'gsm8k': 128} |
+| fused-int8 | +0.0366 | +0.0143 | +0.0196 | {'wikitext': 128, 'mbpp': 123, 'gsm8k': 128} |
+| fused-int8-sq0.5 | +0.0116 | -0.0008 | +0.0101 | {'wikitext': 128, 'mbpp': 123, 'gsm8k': 128} |
+| fused-int8-sq0.65 | +0.0130 | -0.0037 | -0.0163 | {'wikitext': 128, 'mbpp': 123, 'gsm8k': 128} |
+| fused-int8-sq0.8 | +0.0184 | +0.0009 | -0.0241 | {'wikitext': 128, 'mbpp': 123, 'gsm8k': 128} |
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/softgeek23/main/ap-VxaWU2Scg1oQ3frUmoqUmJ
+EXIT=0

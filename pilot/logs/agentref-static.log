@@ -1,0 +1,52 @@
+✓ Initialized. View run at 
+https://modal.com/apps/softgeek23/main/ap-RGsNeQ7L1AMH15MyjnbKFJ
+✓ Created objects.
+├── ✓ Uploaded 
+│   /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/agentref_experiment.py
+├── ✓ Uploaded /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/agentref
+└── ✓ Created Function evaluate.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1008 20:39:01.423000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1008 20:39:01.423000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    function: 'forward' (/agentref/recipe.py:19)
+W1008 20:39:01.423000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    last reason: 1/7: self._modules['att']._modules['qkv'].s == 0.016901997130686842
+W1008 20:39:01.423000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1008 20:39:01.423000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+W1008 20:39:03.316000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1008 20:39:03.316000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    function: 'forward' (/agentref/recipe.py:19)
+W1008 20:39:03.316000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    last reason: 1/7: self._modules['att']._modules['qkv'].s == 0.01877999681187427
+W1008 20:39:03.316000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1008 20:39:03.316000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+W1008 20:39:03.813000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1008 20:39:03.813000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    function: 'forward' (/agentref/recipe.py:19)
+W1008 20:39:03.813000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    last reason: 1/7: self._modules['att']._modules['o'].s == 0.014493229820972352
+W1008 20:39:03.813000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1008 20:39:03.813000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+W1008 20:39:15.063000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1008 20:39:15.063000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    function: 'forward' (/agentref/recipe.py:19)
+W1008 20:39:15.063000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    last reason: 1/7: self._modules['att']._modules['qkv'].s == 0.01877999681187427
+W1008 20:39:15.063000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1008 20:39:15.063000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[agent-b8-attn-s-norm-c0.9] RESULT {"variant": "agent-b8-attn-s-norm-c0.9", "build_warmup_s": 220.4, "dnll": {"wikitext": 0.01355703640729189, "mbpp": -0.0016567178858004935, "gsm8k": 0.0009254771284759045}, "speedup": {"16": 0.7915318516092538, "32": 0.8386442641591964, "64": 0.8264422841935609}, "speedup_geomean": 0.8186273221586414}
+[agent-b8-attn-s-norm] RESULT {"variant": "agent-b8-attn-s-norm", "build_warmup_s": 226.8, "dnll": {"wikitext": 0.013520472683012486, "mbpp": -0.0024981476911684363, "gsm8k": 0.003010846208781004}, "speedup": {"16": 0.7830230792119932, "32": 0.8312571780020893, "64": 0.8171007375327268}, "speedup_geomean": 0.8102055079616951}
+[agent-b8-attn-s-norm-o] RESULT {"variant": "agent-b8-attn-s-norm-o", "build_warmup_s": 228.8, "dnll": {"wikitext": 0.014528575353324413, "mbpp": -0.0030751126568491867, "gsm8k": 0.003753908444195986}, "speedup": {"16": 0.7947095054092105, "32": 0.847703857040786, "64": 0.8343439043545166}, "speedup_geomean": 0.8252760111877905}
+[agent-s-norm] RESULT {"variant": "agent-s-norm", "build_warmup_s": 252.5, "dnll": {"wikitext": 0.010969997383654118, "mbpp": 0.0008829793309777733, "gsm8k": -0.0007713895756751299}, "speedup": {"16": 0.8107744216896909, "32": 0.8561019301975284, "64": 0.8385222756980896}, "speedup_geomean": 0.8349235414231175}
+| agent-b8-attn-s-norm | 0.810 | {'16': 0.7830230792119932, '32': 0.8312571780020893, '64': 0.8171007375327268} | {'wikitext': 0.013520472683012486, 'mbpp': -0.0024981476911684363, 'gsm8k': 0.003010846208781004} | 226.8 |
+| agent-b8-attn-s-norm-o | 0.825 | {'16': 0.7947095054092105, '32': 0.847703857040786, '64': 0.8343439043545166} | {'wikitext': 0.014528575353324413, 'mbpp': -0.0030751126568491867, 'gsm8k': 0.003753908444195986} | 228.8 |
+| agent-b8-attn-s-norm-c0.9 | 0.819 | {'16': 0.7915318516092538, '32': 0.8386442641591964, '64': 0.8264422841935609} | {'wikitext': 0.01355703640729189, 'mbpp': -0.0016567178858004935, 'gsm8k': 0.0009254771284759045} | 220.4 |
+| agent-s-norm | 0.835 | {'16': 0.8107744216896909, '32': 0.8561019301975284, '64': 0.8385222756980896} | {'wikitext': 0.010969997383654118, 'mbpp': 0.0008829793309777733, 'gsm8k': -0.0007713895756751299} | 252.5 |
+Stopping app - local entrypoint completed.
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/softgeek23/main/ap-RGsNeQ7L1AMH15MyjnbKFJ
+EXIT=0

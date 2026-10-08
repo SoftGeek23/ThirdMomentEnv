@@ -1,0 +1,172 @@
+✓ Initialized. View run at 
+https://modal.com/apps/softgeek23/main/ap-AVQ8E9D2IqmdomqgaQldl9
+✓ Created objects.
+├── ✓ Uploaded /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/pilot.py
+├── ✓ Created Function prepare.
+├── ✓ Created Function evaluate.
+└── ✓ Created Function sensitivity.
+
+[1AFetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]
+[1AFetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1127.80it/s]
+Token indices sequence length is longer than the specified maximum sequence length for this model (298938 > 131072). Running this sequence through the model will result in indexing errors
+prepared: {'data_sha256': '76fcf24aba38c5e6b54040370a667e4cfd15b4f86ed163a3eaf97feac0b4bda5', 'n_eval': {'wikitext': 128, 'mbpp': 128, 'gsm8k': 128}, 'scored_tokens': {'wikitext': 32768, 'mbpp': 6720, 'gsm8k': 16596}}
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[17:51:40] [sens-int8] start
+`torch_dtype` is deprecated! Use `dtype` instead!
+[17:51:41] [sens-fp8] start
+[17:51:43] [bf16] bench bf16 baseline
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[17:51:48] [int8] bench bf16 baseline[17:51:47] [fp8] bench bf16 baseline
+
+[17:51:56] [sens-fp8] done
+[17:52:10] [sens-int8] done
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1008 17:52:17.839000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1008 17:52:27.437000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+W1008 17:52:27.598000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+[17:55:45] [bf16] nll
+[bf16] done: b1 24.73 ms, b16 14966 tok/s
+[17:56:03] [fp8] quantized 196 modules; profiling + bench
+[17:56:12] [int8] quantized 196 modules; profiling + bench
+[18:03:39] [fp8] nll
+[fp8] done: b1 25.63 ms, b16 21215 tok/s
+[18:06:36] [int8] nll
+[int8] done: b1 32.14 ms, b16 20874 tok/s
+stage 1 done at 981s
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[18:07:30] [int8-protect8] bench bf16 baseline
+`torch_dtype` is deprecated! Use `dtype` instead!
+[18:07:32] [int8-protect4] bench bf16 baseline
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[18:07:34] [int8-protect16] bench bf16 baseline
+[18:07:37] [fp8-protect4] bench bf16 baseline[18:07:37] [fp8-protect8] bench bf16 baseline
+
+[18:07:37] [fp8-protect16] bench bf16 baseline
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1008 18:08:04.557000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1008 18:08:11.489000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+W1008 18:08:12.048000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+W1008 18:08:15.684000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+W1008 18:08:16.058000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+W1008 18:08:16.758000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+[18:11:34] [int8-protect8] quantized 188 modules; profiling + bench
+[18:11:46] [int8-protect16] quantized 180 modules; profiling + bench
+[18:12:08] [fp8-protect16] quantized 180 modules; profiling + bench
+[18:12:29] [fp8-protect8] quantized 188 modules; profiling + bench
+[18:12:29] [int8-protect4] quantized 192 modules; profiling + bench
+[18:12:30] [fp8-protect4] quantized 192 modules; profiling + bench
+[18:19:54] [fp8-protect16] nll
+[fp8-protect16] done: b1 28.26 ms, b16 19740 tok/s
+[18:20:43] [int8-protect16] nll
+[18:20:48] [int8-protect8] nll
+[18:20:50] [fp8-protect8] nll
+[fp8-protect8] done: b1 27.05 ms, b16 20039 tok/s
+[18:21:15] [fp8-protect4] nll
+[int8-protect16] done: b1 27.45 ms, b16 20343 tok/s
+[int8-protect8] done: b1 26.99 ms, b16 20762 tok/s
+[fp8-protect4] done: b1 27.18 ms, b16 20032 tok/s
+[18:22:54] [int8-protect4] nll
+stage 2 done at 1957s
+[int8-protect4] done: b1 29.84 ms, b16 21232 tok/s
+# Precision pilot: Qwen3-1.7B-Base on L4
+
+- model `Qwen/Qwen3-1.7B-Base@ea980cb`, torch 2.8.0, torchao 0.13.0, transformers 4.56.2
+- eval tokens/slice: {'wikitext': 32768, 'mbpp': 6720, 'gsm8k': 16596}, data sha256 `76fcf24aba38`
+- thresholds: speedup >= 1.2, dNLL >= 0.02 with CI>0, recover >= 75%, keep >= 75% of speed gain
+
+## Variants
+
+| variant | #quant | lowp calls | b1 ms | b1 x | b16 tok/s | b16 x | peak GB | dNLL wikitext [95% CI] | dNLL mbpp [95% CI] | dNLL gsm8k [95% CI] |
+|---|---|---|---|---|---|---|---|---|---|---|
+| bf16 | 0 | 0 | 24.73 | 1.00 | 14966 | 1.00 | 3.45 | +0.0000 [+0.0000, +0.0000] | +0.0000 [+0.0000, +0.0000] | +0.0000 [+0.0000, +0.0000] |
+| int8 | 196 | 196 | 32.14 | 0.78 | 20874 | 1.40 | 2.32 | +0.0318 [+0.0284, +0.0355] * | +0.0185 [+0.0106, +0.0260] | +0.0221 [+0.0154, +0.0294] * |
+| fp8 | 196 | 196 | 25.63 | 0.97 | 21215 | 1.41 | 2.19 | +0.0089 [+0.0070, +0.0107] | +0.0068 [+0.0020, +0.0117] | +0.0002 [-0.0035, +0.0038] |
+| int8-protect4 | 192 | 192 | 29.84 | 0.83 | 21232 | 1.41 | 2.37 | +0.0312 [+0.0279, +0.0347] * | +0.0109 [+0.0028, +0.0187] | +0.0155 [+0.0090, +0.0226] |
+| int8-protect8 | 188 | 188 | 26.99 | 0.89 | 20762 | 1.37 | 2.40 | +0.0303 [+0.0270, +0.0337] * | +0.0101 [-0.0002, +0.0199] | +0.0180 [+0.0124, +0.0237] |
+| int8-protect16 | 180 | 180 | 27.45 | 0.93 | 20343 | 1.47 | 2.46 | +0.0251 [+0.0224, +0.0279] * | +0.0195 [+0.0109, +0.0289] | +0.0138 [+0.0093, +0.0183] |
+| fp8-protect4 | 192 | 192 | 27.18 | 0.94 | 20032 | 1.38 | 2.20 | +0.0091 [+0.0072, +0.0110] | +0.0100 [+0.0051, +0.0152] | +0.0007 [-0.0032, +0.0043] |
+| fp8-protect8 | 188 | 188 | 27.05 | 0.94 | 20039 | 1.37 | 2.22 | +0.0085 [+0.0062, +0.0106] | +0.0117 [+0.0071, +0.0164] | +0.0026 [-0.0012, +0.0065] |
+| fp8-protect16 | 180 | 180 | 28.26 | 0.93 | 19740 | 1.43 | 2.24 | +0.0082 [+0.0063, +0.0101] | +0.0091 [+0.0040, +0.0143] | +0.0006 [-0.0031, +0.0041] |
+
+`*` = degraded beyond threshold. Speedups are vs BF16 measured on the same GPU.
+
+## Verdict
+
+**DO NOT CONTINUE (as specified)**
+
+- **int8**: WEAK: degrades on ['wikitext', 'gsm8k'] but no top-k protection recovered within the speed budget
+  - top-4: recovered=False, speed gain retained=103%
+  - top-8: recovered=False, speed gain retained=93%
+  - top-16: recovered=False, speed gain retained=118%
+- **fp8**: NO PUZZLE: fast and quality-safe uniformly
+  - top-4: recovered=False, speed gain retained=91%
+  - top-8: recovered=False, speed gain retained=89%
+  - top-16: recovered=False, speed gain retained=103%
+
+## Most sensitive projections (int8, calibration data)
+
+| fqn | rel err | act amax/rms |
+|---|---|---|
+| model.layers.2.mlp.up_proj | 1.10e-02 | 114 |
+| model.layers.3.mlp.up_proj | 9.04e-03 | 55 |
+| model.layers.4.mlp.down_proj | 8.39e-03 | 180 |
+| model.layers.11.self_attn.v_proj | 7.78e-03 | 46 |
+| model.layers.17.self_attn.v_proj | 7.65e-03 | 44 |
+| model.layers.3.mlp.down_proj | 7.17e-03 | 184 |
+| model.layers.1.mlp.up_proj | 7.10e-03 | 55 |
+| model.layers.15.self_attn.v_proj | 7.02e-03 | 43 |
+| model.layers.0.mlp.down_proj | 6.63e-03 | 128 |
+| model.layers.16.self_attn.v_proj | 6.60e-03 | 40 |
+
+Worst examples, uniform int8:
+- wikitext: #83 +0.083 ` . We would get into it constantly , whether playi`; #63 +0.082 ` campaign , in the middle Danube valley . \n Polit`; #13 +0.080 ` In the 1980s , an elderly resident recalled that `
+- mbpp: #211 +0.131 `def count_Num(n): \n    if (n == 1): \n        r`; #430 +0.122 `def parabola_directrix(a, b, c): \n  directrix=((`; #292 +0.116 `def find(n,m):  \n    q = n//m \n    return (q)`
+- gsm8k: #695 +0.177 ` Bucks:50(.50)=25\n8 Points:25(.20)=5 bucks\n#### `; #332 +0.171 ` Ruins:220(.40)=88\nUnmanned:88/2=<<88/2=44>>44 ca`; #761 +0.150 ` Jana has 6*3=<<6*3=18>>18 Pomeranians.\nJana has `
+
+## Most sensitive projections (fp8, calibration data)
+
+| fqn | rel err | act amax/rms |
+|---|---|---|
+| model.layers.13.self_attn.o_proj | 2.05e-03 | 20 |
+| model.layers.17.self_attn.o_proj | 1.84e-03 | 18 |
+| model.layers.12.self_attn.o_proj | 1.70e-03 | 21 |
+| model.layers.14.self_attn.o_proj | 1.63e-03 | 130 |
+| model.layers.10.self_attn.o_proj | 1.56e-03 | 17 |
+| model.layers.9.self_attn.o_proj | 1.54e-03 | 22 |
+| model.layers.4.self_attn.o_proj | 1.53e-03 | 30 |
+| model.layers.11.self_attn.o_proj | 1.53e-03 | 17 |
+| model.layers.7.self_attn.o_proj | 1.50e-03 | 22 |
+| model.layers.16.self_attn.o_proj | 1.48e-03 | 19 |
+
+Worst examples, uniform fp8:
+- wikitext: #102 +0.034 ` Government of Northern Ireland ) . The officers a`; #29 +0.033 `1 for testing and evaluation purposes . Ericsson '`; #72 +0.032 `03 ) \n Best Wrestling Maneuver ( 2002 ) F @-@ 5 \`
+- mbpp: #214 +0.098 `import math\ndef degree_radian(radian):\n degree`; #176 +0.097 `def perimeter_triangle(a,b,c):\n  perimeter=a+b+c`; #85 +0.078 `import math\ndef surfacearea_sphere(r):\n  surfa`
+- gsm8k: #346 +0.042 ` The son gets 4 cookies a day for 5 days so he eat`; #57 +0.041 ` The boxes can weigh up to 5000 pounds - 3755 poun`; #332 +0.041 ` Ruins:220(.40)=88\nUnmanned:88/2=<<88/2=44>>44 ca`
+
+wrote pilot/results/20261008-112331.md and .json  (1959s total)
+Stopping app - local entrypoint completed.
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/softgeek23/main/ap-AVQ8E9D2IqmdomqgaQldl9
+EXIT=0

@@ -1,0 +1,18 @@
+NVIDIA A10G, 610.57.04
+[20:32:29] baseline: load + compile BF16
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+[20:37:10] submission: build
+[20:37:47] submission: quality
+[20:37:52] submission: speed
+[20:38:29] submission: score=1.0000 {'build_and_warmup_s': 35.7, 'dnll_by_batch': {'16': {'gsm8k': 0.003041268792003393, 'mbpp': 0.007045248057693243, 'wikitext': 0.010819002985954285}, '32': {'gsm8k': 0.003610137850046158, 'mbpp': 0.006371701136231422, 'wikitext': 0.011323658749461174}, '64': {'gsm8k': 0.003693926613777876, 'mbpp': 0.006691498216241598, 'wikitext': 0.010778374969959259}}, 'dnll_worst_per_slice': {'gsm8k': 0.003693926613777876, 'mbpp': 0.007045248057693243, 'wikitext': 0.011323658749461174}, 'spearman_min': 0.998211282315601, 'keep_agreement_min': 0.9791666666666666, 'ranking_ok': True, 'speedup_by_batch': {'16': 1.7798353167163987, '32': 1.7699058830460135, '64': 1.7452270911631216}, 'speedup_geomean': 1.7649292998171198, 'quality_gate': 1.0, 'speed_credit': 1.0, 'score': 1.0}
+{
+  "reward": 1.0,
+  "speedup_geomean": 1.7649,
+  "dnll_worst": 0.01132,
+  "quality_gate": 1.0,
+  "spearman_min": 0.99821,
+  "keep_agreement_min": 0.9792,
+  "speed_credit": 1.0
+}

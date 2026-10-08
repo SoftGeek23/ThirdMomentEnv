@@ -1,0 +1,36 @@
+✓ Initialized. View run at 
+https://modal.com/apps/softgeek23/main/ap-4zIPul8oqhtuDGDUepy4YV
+✓ Created objects.
+├── ✓ Uploaded 
+│   /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/agentref_experiment.py
+├── ✓ Uploaded /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/agentref
+└── ✓ Created Function evaluate.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+[agent] RESULT {"variant": "agent", "build_warmup_s": 212.3, "dnll": {"wikitext": 0.011768202297389507, "mbpp": 0.005581401954821455, "gsm8k": 0.0017497804947197437}, "speedup": {"16": 1.678392005688503, "32": 1.6945424606713158, "64": 1.6598780183103905}, "speedup_geomean": 1.6775443494430922}
+W1008 20:34:57.950000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] torch._dynamo hit config.recompile_limit (8)
+W1008 20:34:57.950000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    function: 'forward' (/agentref/recipe.py:19)
+W1008 20:34:57.950000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8]    last reason: 1/7: tensor 'x' size mismatch at index 0. expected 32, actual 64
+W1008 20:34:57.950000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1008 20:34:57.950000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[agent-b8-attn] RESULT {"variant": "agent-b8-attn", "build_warmup_s": 225.6, "dnll": {"wikitext": 0.013778078369796276, "mbpp": 0.007269002557770024, "gsm8k": 0.003134537721052766}, "speedup": {"16": 1.7050939191571677, "32": 1.7179771436825486, "64": 1.6842417267887924}, "speedup_geomean": 1.702380763818387}
+[agent-b8-attn-a50] RESULT {"variant": "agent-b8-attn-a50", "build_warmup_s": 13.1, "dnll": {"wikitext": 0.00903006736189127, "mbpp": 0.0071601162596446714, "gsm8k": 0.0033443912398070097}, "speedup": {"16": 1.7040719925524945, "32": 1.7107460650061193, "64": 1.5666503673752907}, "speedup_geomean": 1.6591355070804992}
+[agent-b8-all] RESULT {"variant": "agent-b8-all", "build_warmup_s": 502.2, "dnll": {"wikitext": 0.016042194329202175, "mbpp": 0.0059275820972473645, "gsm8k": 0.006389332003891468}, "speedup": {"16": 2.0314411232381855, "32": 1.9011465493357127, "64": 1.8690065693103233}, "speedup_geomean": 1.9326070275248703}
+| variant | b16 x | b32 x | b64 x | geomean x | dNLL wikitext | mbpp | gsm8k | build s |
+|---|---|---|---|---|---|---|---|---|
+| agent | 1.678 | 1.695 | 1.660 | **1.678** | +0.0118 | +0.0056 | +0.0017 | 212 |
+| agent-b8-attn | 1.705 | 1.718 | 1.684 | **1.702** | +0.0138 | +0.0073 | +0.0031 | 226 |
+| agent-b8-all | 2.031 | 1.901 | 1.869 | **1.933** | +0.0160 | +0.0059 | +0.0064 | 502 |
+| agent-b8-attn-a50 | 1.704 | 1.711 | 1.567 | **1.659** | +0.0090 | +0.0072 | +0.0033 | 13 |
+Stopping app - local entrypoint completed.
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/softgeek23/main/ap-4zIPul8oqhtuDGDUepy4YV
+EXIT=0

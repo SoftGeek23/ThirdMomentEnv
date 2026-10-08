@@ -1,0 +1,37 @@
+✓ Initialized. View run at 
+https://modal.com/apps/softgeek23/main/ap-Y0Ix9o22DB8KbYH2E13XjR
+✓ Created objects.
+├── ✓ Uploaded 
+│   /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/agentref2_experiment.py
+├── ✓ Uploaded /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/agentref2
+└── ✓ Created Function evaluate.
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+[q-res] RESULT {"variant": "q-res", "build_warmup_s": 208.0, "dnll": {"wikitext": 0.01041018683463335, "mbpp": -2.186278986737011e-05, "gsm8k": -0.0014797868207097054}, "speedup": {"16": 1.7605635183411685, "32": 1.7683108246670094, "64": 1.73290206917139}, "speedup_geomean": 1.7538593998001528}
+W1008 20:50:50.711000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/64] torch._dynamo hit config.recompile_limit (64)
+W1008 20:50:50.711000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/64]    function: 'layer' (/agentref2/recipe_plus.py:175)
+W1008 20:50:50.711000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/64]    last reason: 1/63: l._modules['mlp']._modules['gate_up'].s == 0.012212144108269159
+W1008 20:50:50.711000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/64] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1008 20:50:50.711000 2 site-packages/torch/_dynamo/convert_frame.py:1016] [1/64] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[q-res-tiles-static] RESULT {"variant": "q-res-tiles-static", "build_warmup_s": 353.2, "dnll": {"wikitext": 0.011271723546087742, "mbpp": -0.0021295135583334823, "gsm8k": -0.0012953623663634062}, "speedup": {"16": 1.7677918424983925, "32": 1.7384126464705192, "64": 0.8169970884036527}, "speedup_geomean": 1.3591524396284664}
+[q] RESULT {"variant": "q", "build_warmup_s": 574.1, "dnll": {"wikitext": 0.009831319563090801, "mbpp": 0.0025732539049008996, "gsm8k": 0.000502291601151228}, "speedup": {"16": 1.784647531842866, "32": 1.7727995796286087, "64": 1.7454550593492053}, "speedup_geomean": 1.767557656388222}
+[q-res-tiles] RESULT {"variant": "q-res-tiles", "build_warmup_s": 595.7, "dnll": {"wikitext": 0.010986100882291794, "mbpp": 0.0019623860111081504, "gsm8k": -0.0017886727582663298}, "speedup": {"16": 1.9471801526355337, "32": 1.8881386817423813, "64": 1.854510335698562}, "speedup_geomean": 1.8962245309822718}
+| q | 1.768 | {'16': 1.784647531842866, '32': 1.7727995796286087, '64': 1.7454550593492053} | {'wikitext': 0.009831319563090801, 'mbpp': 0.0025732539049008996, 'gsm8k': 0.000502291601151228} | 574.1 |
+| q-res | 1.754 | {'16': 1.7605635183411685, '32': 1.7683108246670094, '64': 1.73290206917139} | {'wikitext': 0.01041018683463335, 'mbpp': -2.186278986737011e-05, 'gsm8k': -0.0014797868207097054} | 208.0 |
+| q-res-tiles | 1.896 | {'16': 1.9471801526355337, '32': 1.8881386817423813, '64': 1.854510335698562} | {'wikitext': 0.010986100882291794, 'mbpp': 0.0019623860111081504, 'gsm8k': -0.0017886727582663298} | 595.7 |
+| q-res-tiles-static | 1.359 | {'16': 1.7677918424983925, '32': 1.7384126464705192, '64': 0.8169970884036527} | {'wikitext': 0.011271723546087742, 'mbpp': -0.0021295135583334823, 'gsm8k': -0.0012953623663634062} | 353.2 |
+Stopping app - local entrypoint completed.
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/softgeek23/main/ap-Y0Ix9o22DB8KbYH2E13XjR
+EXIT=0

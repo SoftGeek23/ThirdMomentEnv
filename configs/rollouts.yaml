@@ -1,0 +1,19 @@
+# Harbor job config for the graded rollouts. Every run uses exactly these settings,
+# and the evaluation report quotes this file.
+#   harbor run -c configs/rollouts.yaml --job-name <name>   (or: scripts/rollouts.sh)
+n_attempts: 5            # five independent trials, each in a fresh container
+n_concurrent_trials: 5
+timeout_multiplier: 1.0  # keep the task.toml timeouts as the fixed resource budget
+retry:
+  max_retries: 0         # never retry a trial: retries would bias the score distribution
+tasks:
+  - path: tasks/qwen3-w8a8-recipe
+agents:
+  - name: terminus-2
+    # OpenRouter id "openai/gpt-6.1-sol" (verified 2026-10-08 against /api/v1/models).
+    # The "openrouter/" prefix routes it through OpenRouter.
+    model_name: openrouter/openai/gpt-6.1-sol
+    kwargs: {}           # e.g. reasoning_effort: high. Record whatever you set here.
+environment:
+  type: modal
+  delete: true

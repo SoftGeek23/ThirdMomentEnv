@@ -1,0 +1,70 @@
+✓ Initialized. View run at 
+https://modal.com/apps/softgeek23/main/ap-iNKEhnKIDOGJVky4dw0L16
+Building image im-fY4ENjuV9SNqsxGBcaBXMy
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HOME=/cache/hf
+
+=> Step 2: ENV TOKENIZERS_PARALLELISM=false
+
+=> Step 3: ENV HF_HUB_OFFLINE=1
+
+=> Step 4: ENV HF_DATASETS_OFFLINE=1
+
+=> Step 5: ENV TORCHINDUCTOR_CACHE_DIR=/cache/inductor-cache
+Saving image...
+Image saved, took 786.71ms
+
+Built image im-fY4ENjuV9SNqsxGBcaBXMy in 1.30s
+
+
+✓ Created objects.
+├── ✓ Uploaded /Users/mokshnirvaan/Desktop/ThirdMoment/pilot/bench_batches.py
+└── ✓ Created Function sweep.
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-2-raw-v1' at /cache/hf/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Thu Oct  8 17:38:11 2026).
+Token indices sequence length is longer than the specified maximum sequence length for this model (262210 > 131072). Running this sequence through the model will result in indexing errors
+`torch_dtype` is deprecated! Use `dtype` instead!
+/usr/local/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:282: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1008 18:32:56.538000 2 site-packages/torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+[18:34:30] compiled bf16 b=16 in 127.8s
+[18:36:37] compiled bf16 b=32 in 127.3s
+[18:38:44] compiled bf16 b=64 in 127.1s
+[18:43:59] compiled int8 b=16 in 312.8s
+[18:49:08] compiled int8 b=32 in 308.7s
+[18:54:37] compiled int8 b=64 in 329.2s
+[18:58:33] compiled fp8 b=16 in 234.8s
+[19:02:25] compiled fp8 b=32 in 231.8s
+[19:06:19] compiled fp8 b=64 in 234.6s
+[19:06:56] round 1/5 done
+[19:07:33] round 2/5 done
+[19:08:11] round 3/5 done
+[19:08:49] round 4/5 done
+[19:09:27] round 5/5 done
+# Batch sweep on NVIDIA L4 (prefill, 256 tokens/seq, interleaved x5 rounds)
+
+| batch | mode | latency ms [p10-p90] | tok/s | speedup vs BF16 [min-max over rounds] | GPU ms: gemm / attn / triton-fused / lm_head / other |
+|---|---|---|---|---|---|
+| 16 | bf16 | 287.3 [279.2-298.3] | 14257 | 1.000 [1.000-1.000] | 203.2 / 25.7 / 42.7 / 0.0 / 0.0 |
+| 16 | int8 | 196.0 [193.8-199.6] | 20897 | 1.459 [1.443-1.499] | 107.9 / 22.1 / 51.3 / 0.0 / 0.0 |
+| 16 | fp8 | 201.3 [198.0-203.9] | 20345 | 1.425 [1.406-1.465] | 153.6 / 25.0 / 10.8 / 0.0 / 0.0 |
+| 32 | bf16 | 547.3 [536.5-560.2] | 14968 | 1.000 [1.000-1.000] | 414.4 / 53.9 / 93.6 / 0.0 / 0.0 |
+| 32 | int8 | 394.2 [388.1-403.2] | 20779 | 1.387 [1.377-1.389] | 207.4 / 50.0 / 121.9 / 0.0 / 0.0 |
+| 32 | fp8 | 400.9 [394.8-410.8] | 20432 | 1.365 [1.357-1.368] | 309.7 / 52.5 / 25.2 / 0.0 / 0.0 |
+| 64 | bf16 | 1085.7 [1058.8-1101.2] | 15090 | 1.000 [1.000-1.000] | 789.6 / 108.1 / 193.7 / 0.0 / 0.0 |
+| 64 | int8 | 781.9 [770.6-799.7] | 20953 | 1.387 [1.375-1.391] | 425.4 / 103.9 / 254.8 / 0.0 / 0.0 |
+| 64 | fp8 | 798.1 [787.1-813.1] | 20528 | 1.359 [1.345-1.363] | 637.4 / 107.8 / 55.8 / 0.0 / 0.0 |
+
+INT8 vs FP8 (same container, same rounds):
+- batch 16: FP8 is 0.974x the speed of INT8 (201.3 ms vs 196.0 ms)
+- batch 32: FP8 is 0.983x the speed of INT8 (400.9 ms vs 394.2 ms)
+- batch 64: FP8 is 0.980x the speed of INT8 (798.1 ms vs 781.9 ms)
+
+wrote pilot/results/sweep-20261008-120938.md (2265s)
+Stopping app - local entrypoint completed.
+Runner terminated.
+✓ App completed. View run at 
+https://modal.com/apps/softgeek23/main/ap-iNKEhnKIDOGJVky4dw0L16
+EXIT=0

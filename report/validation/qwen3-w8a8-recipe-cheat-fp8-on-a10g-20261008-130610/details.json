@@ -1,0 +1,16 @@
+{
+  "scoring": {
+    "dnll_full": 0.02,
+    "dnll_zero": 0.05,
+    "ref_speedup": 1.47,
+    "min_spearman": 0.99,
+    "min_keep_agreement": 0.95
+  },
+  "modes": {
+    "submission": {
+      "error": "Traceback (most recent call last):\n  File \"/tests/grade.py\", line 137, in main\n    fn = recipe.build(model)\n         ^^^^^^^^^^^^^^^^^^^\n  File \"/app/submission/recipe.py\", line 6, in build\n    quantize_(model.model.layers, Float8DynamicActivationFloat8WeightConfig(granularity=PerRow(),\n  File \"/usr/local/lib/python3.12/site-packages/torchao/quantization/quant_api.py\", line 535, in quantize_\n    _replace_with_custom_fn_if_matches_filter(\n  File \"/usr/local/lib/python3.12/site-packages/torchao/quantization/quant_api.py\", line 210, in _replace_with_custom_fn_if_matches_filter\n    new_child = _replace_with_custom_fn_if_matches_filter(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/torchao/quantization/quant_api.py\", line 210, in _replace_with_custom_fn_if_matches_filter\n    new_child = _replace_with_custom_fn_if_matches_filter(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/torchao/quantization/quant_api.py\", line 210, in _replace_with_custom_fn_if_matches_filter\n    new_child = _replace_with_custom_fn_if_matches_filter(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Float8 dynamic activation quantization is only supported on CUDA>=8.9 and MI300+\n",
+      "score": 0.0
+    }
+  },
+  "gpu": "NVIDIA A10G"
+}

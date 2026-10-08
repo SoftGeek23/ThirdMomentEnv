@@ -1,0 +1,40 @@
+  1/1 Dnll_Worst: 0.014 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:20:17 0:00:00
+adhoc • oracle
+┏━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Excep… ┃ Dnll_… ┃ Keep_… ┃ Quali… ┃ Reward ┃ Spea… ┃ Speed… ┃ Spee… ┃
+┡━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━┩
+│      1 │      0 │  0.014 │  0.990 │  1.000 │  1.000 │ 0.998 │  1.000 │ 1.630 │
+└────────┴────────┴────────┴────────┴────────┴────────┴───────┴────────┴───────┘
+
+┏━━━━━━━━━┳━━━━━━━┓
+┃ Reward  ┃ Count ┃
+┡━━━━━━━━━╇━━━━━━━┩
+│ 1.0     │     1 │
+│ 1.63    │     1 │
+│ 0.01418 │     1 │
+│ 1.0     │     1 │
+│ 0.99836 │     1 │
+│ 0.9896  │     1 │
+│ 1.0     │     1 │
+└─────────┴───────┘
+
+Job Info
+Total runtime: 20m 17s
+Results written to jobs/qwen3-w8a8-recipe-oracle-20261008-131020/result.json
+Inspect results by running `harbor view jobs`
+Share results by running `harbor upload 
+jobs/qwen3-w8a8-recipe-oracle-20261008-131020`
+
+### qwen3-w8a8-recipe-oracle-20261008-131020
+
+| trial | reward | dnll_worst | keep_agreement_min | quality_gate | spearman_min | speed_credit | speedup_geomean | cost $ | error |
+|---|---|---|---|---|---|---|---|---|---|
+| qwen3-w8a8-recipe__3YNfYno | 1.0000 | 0.0142 | 0.9896 | 1.0000 | 0.9984 | 1.0000 | 1.6300 |  |  |
+
+- n = 1
+- mean = 1.0000  (target < 0.5: NO)
+- std (sample, ddof=1) = 0.0000  (target > 0.08: NO)
+- std (population, ddof=0) = 0.0000
+
+VALIDATION: PASS
+EXIT=0

@@ -1,0 +1,163 @@
+{
+    "id": "69b5582b-b8f1-4ee5-9bba-38833bec993a",
+    "task_name": "thirdmoment/qwen3-w8a8-recipe",
+    "trial_name": "qwen3-w8a8-recipe__guwCfok",
+    "trial_uri": "file:///Users/mokshnirvaan/Desktop/ThirdMoment/jobs/qwen3-int8-a10g-rollouts6-20261008-144256/qwen3-w8a8-recipe__guwCfok",
+    "task_id": {
+        "path": "tasks/qwen3-w8a8-recipe"
+    },
+    "source": null,
+    "task_checksum": "7f7cd8e0e78c2e5c11ee1fdabbb1c9692550af1c817d078b57727940d259a1a6",
+    "config": {
+        "task": {
+            "path": "tasks/qwen3-w8a8-recipe",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "qwen3-w8a8-recipe__guwCfok",
+        "trials_dir": "jobs/qwen3-int8-a10g-rollouts6-20261008-144256",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openrouter/openai/gpt-6.1-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "50549851-7c55-475a-a9fb-fed430595742",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-6.1-sol",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 804641,
+        "n_cache_tokens": 758585,
+        "n_output_tokens": 13984,
+        "cost_usd": 0.33078750000000007,
+        "model_usage": {
+            "openai/gpt-6.1-sol": {
+                "n_input_tokens": 757139,
+                "n_cache_tokens": 714006,
+                "n_output_tokens": 13527,
+                "cost_usd": 0.31445360000000006
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 34,
+            "api_request_times_msec": [
+                3232.03182220459,
+                6774.266242980957,
+                5739.001035690308,
+                4232.838869094849,
+                3761.5749835968018,
+                7045.971870422363,
+                4383.349895477295,
+                5009.619235992432,
+                12767.055034637451,
+                4856.546878814697,
+                5877.747058868408,
+                10131.841897964478,
+                6140.147924423218,
+                8288.588047027588,
+                17318.773984909058,
+                5150.775194168091,
+                14869.432210922241,
+                10394.206047058105,
+                5034.260034561157,
+                13206.738948822021,
+                12029.01291847229,
+                7661.017894744873,
+                5260.108947753906,
+                5274.624824523926,
+                19009.729862213135,
+                13193.780899047852,
+                9968.900203704834,
+                7097.720146179199,
+                10759.439945220947,
+                9219.86198425293,
+                9451.945066452026,
+                8270.266771316528,
+                9769.018173217773,
+                9757.532835006714
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "CancelledError",
+        "exception_message": "",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/runners.py\", line 195, in run\n    return runner.run(main)\n           ~~~~~~~~~~^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/base_events.py\", line 712, in run_until_complete\n    self.run_forever()\n    ~~~~~~~~~~~~~~~~^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/base_events.py\", line 683, in run_forever\n    self._run_once()\n    ~~~~~~~~~~~~~~^^\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/base_events.py\", line 2012, in _run_once\n    event_list = self._selector.select(timeout)\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/selectors.py\", line 548, in select\n    kev_list = self._selector.control(None, max_ev, timeout)\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/cli/jobs.py\", line 375, in _handle_sigterm\n    raise KeyboardInterrupt\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 40, in _run\n    await self._run_agent()\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 76, in _run_agent\n    await self._run_agent_phase(\n    ...<5 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 651, in _run_agent_phase\n    await asyncio.wait_for(\n    ...<6 lines>...\n    )\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1743, in run\n    await self._run_agent_loop(\n    ...<3 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1523, in _run_agent_loop\n    timeout_occurred, terminal_output = await self._execute_commands(\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1339, in _execute_commands\n    await session.send_keys(\n    ...<3 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 817, in send_keys\n    await self._send_non_blocking_keys(\n    ...<2 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 777, in _send_non_blocking_keys\n    await asyncio.sleep(min_timeout_sec - elapsed_time_sec)\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/tasks.py\", line 718, in sleep\n    return await future\n           ^^^^^^^^^^^^\nasyncio.exceptions.CancelledError\n",
+        "occurred_at": "2026-10-08T22:07:39.279104Z"
+    },
+    "started_at": "2026-10-08T21:42:58.540056Z",
+    "finished_at": "2026-10-08T22:07:41.060970Z",
+    "environment_setup": {
+        "started_at": "2026-10-08T21:42:58.545821Z",
+        "finished_at": "2026-10-08T21:43:02.227435Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-08T21:43:02.227459Z",
+        "finished_at": "2026-10-08T21:43:17.412087Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-08T21:43:17.412402Z",
+        "finished_at": "2026-10-08T22:07:38.190068Z"
+    },
+    "verifier": null,
+    "step_results": null
+}

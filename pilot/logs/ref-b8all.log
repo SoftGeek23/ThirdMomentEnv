@@ -1,0 +1,21 @@
+  1/1 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:05:41 0:00:00
+adhoc • oracle
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      0 │          1 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception       ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ ImageBuildError │     1 │
+└─────────────────┴───────┘
+
+Job Info
+Total runtime: 5m 41s
+Results written to jobs/ref-b8all-oracle-20261008-134218/result.json
+Inspect results by running `harbor view jobs`
+Share results by running `harbor upload jobs/ref-b8all-oracle-20261008-134218`
+
+EXIT=0

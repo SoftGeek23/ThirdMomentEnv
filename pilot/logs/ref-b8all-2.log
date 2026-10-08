@@ -1,0 +1,103 @@
+Failed to download logs to jobs/ref-b8all-regrade-20261008-140931/ref-b8all__symDAMz/agent: Sandbox not found. Please start the environment first.
+Traceback (most recent call last):
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py", line 497, in run
+    await self._prepare()
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py", line 536, in _prepare
+    await self._setup_agent_environment()
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py", line 1684, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py", line 1690, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py", line 1524, in start
+    await self._strategy.start(force_build)
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py", line 326, in start
+    env._sandbox = await env._create_sandbox(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 193, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/tenacity/asyncio/__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py", line 1210, in _create_sandbox
+    sandbox = await Sandbox.create.aio(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+    )
+    ^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/sandbox.py", line 766, in create
+    return await _Sandbox._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<36 lines>...
+    )
+    ^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/sandbox.py", line 947, in _create
+    await resolver.load(obj, load_context)
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/sandbox.py", line 599, in _load
+    create_resp = await load_context.client._stub.SandboxCreate(create_req)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+modal.exception.ResourceExhaustedError: Workspace ac-HzQlT7cSRjj02omAH3vOHg has exceeded its spend limit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py", line 708, in _download_role_logs
+    await self.agent_environment.download_dir(
+    ...<2 lines>...
+    )
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py", line 1587, in download_dir
+    return await self._strategy.download_dir(source_dir, target_dir)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py", line 212, in download_dir
+    await self._env._sdk_download_dir(source_dir, target_dir)
+  File "/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py", line 1491, in _sdk_download_dir
+    raise RuntimeError("Sandbox not found. Please start the environment first.")
+RuntimeError: Sandbox not found. Please start the environment first.
+  1/1 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:21:22 0:00:00
+adhoc • oracle
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      0 │          1 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception              ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ ResourceExhaustedError │     1 │
+└────────────────────────┴───────┘
+
+Job Info
+Total runtime: 21m 22s
+Results written to jobs/ref-b8all-regrade-20261008-140931/result.json
+Inspect results by running `harbor view jobs`
+Share results by running `harbor upload jobs/ref-b8all-regrade-20261008-140931`
+
+EXIT=0

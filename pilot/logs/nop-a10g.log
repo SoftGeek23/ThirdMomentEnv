@@ -1,0 +1,40 @@
+  1/1 Dnll_Worst: 0.001 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:04:04 0:00:00
+adhoc • nop
+┏━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Excep… ┃ Dnll_… ┃ Keep_… ┃ Quali… ┃ Reward ┃ Spea… ┃ Speed… ┃ Spee… ┃
+┡━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━┩
+│      1 │      0 │  0.001 │  1.000 │  1.000 │  0.000 │ 1.000 │  0.000 │ 0.750 │
+└────────┴────────┴────────┴────────┴────────┴────────┴───────┴────────┴───────┘
+
+┏━━━━━━━━━┳━━━━━━━┓
+┃ Reward  ┃ Count ┃
+┡━━━━━━━━━╇━━━━━━━┩
+│ 0.0     │     1 │
+│ 0.7496  │     1 │
+│ 0.0007  │     1 │
+│ 1.0     │     1 │
+│ 0.99986 │     1 │
+│ 1.0     │     1 │
+│ 0.0     │     1 │
+└─────────┴───────┘
+
+Job Info
+Total runtime: 4m 4s
+Results written to jobs/qwen3-w8a8-recipe-nop-20261008-130047/result.json
+Inspect results by running `harbor view jobs`
+Share results by running `harbor upload 
+jobs/qwen3-w8a8-recipe-nop-20261008-130047`
+
+### qwen3-w8a8-recipe-nop-20261008-130047
+
+| trial | reward | dnll_worst | keep_agreement_min | quality_gate | spearman_min | speed_credit | speedup_geomean | cost $ | error |
+|---|---|---|---|---|---|---|---|---|---|
+| qwen3-w8a8-recipe__ZyVJRSg | 0.0000 | 0.0007 | 1.0000 | 1.0000 | 0.9999 | 0.0000 | 0.7496 |  |  |
+
+- n = 1
+- mean = 0.0000  (target < 0.5: OK)
+- std (sample, ddof=1) = 0.0000  (target > 0.08: NO)
+- std (population, ddof=0) = 0.0000
+
+VALIDATION: PASS
+EXIT=0

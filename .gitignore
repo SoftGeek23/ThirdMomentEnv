@@ -1,0 +1,14 @@
+# secrets
+.env
+# large Harbor run outputs (essential per-trial logs are copied to report/rollouts and report/validation)
+jobs/
+# scratch task copies
+.build/
+# caches
+__pycache__/
+*.pyc
+.DS_Store
+# personal notes and the assignment brief
+Project.pdf
+pilot.txt
+pres.txt

@@ -1,0 +1,164 @@
+{
+    "id": "214f1c5c-a604-427a-9207-75899ad69cd5",
+    "task_name": "thirdmoment/qwen3-w8a8-recipe",
+    "trial_name": "qwen3-w8a8-recipe__s4QTHw7",
+    "trial_uri": "file:///Users/mokshnirvaan/Desktop/ThirdMoment/jobs/qwen3-int8-a10g-rollouts8-20261008-140248/qwen3-w8a8-recipe__s4QTHw7",
+    "task_id": {
+        "path": "tasks/qwen3-w8a8-recipe"
+    },
+    "source": null,
+    "task_checksum": "7f7cd8e0e78c2e5c11ee1fdabbb1c9692550af1c817d078b57727940d259a1a6",
+    "config": {
+        "task": {
+            "path": "tasks/qwen3-w8a8-recipe",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "qwen3-w8a8-recipe__s4QTHw7",
+        "trials_dir": "jobs/qwen3-int8-a10g-rollouts8-20261008-140248",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openrouter/openai/gpt-6.1-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "416396c0-4c8e-4fad-b4ee-188fc8287984",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-6.1-sol",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 553594,
+        "n_cache_tokens": 527597,
+        "n_output_tokens": 9209,
+        "cost_usd": 0.2097897,
+        "model_usage": {
+            "openai/gpt-6.1-sol": {
+                "n_input_tokens": 526154,
+                "n_cache_tokens": 500675,
+                "n_output_tokens": 9061,
+                "cost_usd": 0.204324
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 35,
+            "api_request_times_msec": [
+                3413.986921310425,
+                7557.403087615967,
+                2452.1942138671875,
+                5234.504222869873,
+                7807.1129322052,
+                6152.61697769165,
+                5565.337896347046,
+                3054.3761253356934,
+                3626.5010833740234,
+                6517.080068588257,
+                7170.306921005249,
+                8511.86203956604,
+                17230.57198524475,
+                5268.175840377808,
+                4712.746143341064,
+                4478.587865829468,
+                9055.227041244507,
+                4720.936059951782,
+                4804.736614227295,
+                3971.4720249176025,
+                11080.407857894897,
+                4808.543920516968,
+                5049.596309661865,
+                6795.2821254730225,
+                19004.66299057007,
+                11002.89511680603,
+                4120.872974395752,
+                8613.465309143066,
+                8822.141885757446,
+                3398.629903793335,
+                5027.20308303833,
+                4825.250148773193,
+                10402.095079421997,
+                6476.808071136475,
+                4531.475782394409
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "SandboxLikelyOutOfMemoryError",
+        "exception_message": "Modal sandbox likely ran out of memory (exit_code=137, requested_memory_mb=32768)",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py\", line 1356, in _sdk_exec\n    process = await self._sandbox.exec.aio(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<6 lines>...\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/sandbox.py\", line 2267, in exec\n    return await self._exec(\n           ^^^^^^^^^^^^^^^^^\n    ...<10 lines>...\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/sandbox.py\", line 2318, in _exec\n    return await self._exec_through_command_router(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<14 lines>...\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/sandbox.py\", line 2391, in _exec_through_command_router\n    _ = await command_router_client.exec_start(start_req)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/modal/_utils/task_command_router_client.py\", line 536, in exec_start\n    with grpc_error_converter():\n         ~~~~~~~~~~~~~~~~~~~~^^\nmodal.exception.NotFoundError: Modal Sandbox with container ID ta-01M4EN7E0XT7Y6J1MCXG5EMKVS not found. This means this Sandbox has already shut down. (Error code: ZCDVQN9N)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 40, in _run\n    await self._run_agent()\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 76, in _run_agent\n    await self._run_agent_phase(\n    ...<5 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 651, in _run_agent_phase\n    await asyncio.wait_for(\n    ...<6 lines>...\n    )\n  File \"/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1743, in run\n    await self._run_agent_loop(\n    ...<3 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1523, in _run_agent_loop\n    timeout_occurred, terminal_output = await self._execute_commands(\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1339, in _execute_commands\n    await session.send_keys(\n    ...<3 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 817, in send_keys\n    await self._send_non_blocking_keys(\n    ...<2 lines>...\n    )\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 772, in _send_non_blocking_keys\n    await self._send_keys_to_session(keys, action=\"non-blocking\")\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 745, in _send_keys_to_session\n    await _flush()\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 735, in _flush\n    await self._send_key_batches(batch, action)\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 708, in _send_key_batches\n    result = await self.environment.exec(command=command, user=self._user)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py\", line 1565, in exec\n    return await self._strategy.exec(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<5 lines>...\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py\", line 357, in exec\n    return await self._env._sdk_exec(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n        command, cwd=cwd, env=env, timeout_sec=timeout_sec, login=False\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py\", line 1365, in _sdk_exec\n    await self._raise_if_unexpected_exit_137(cause=exc)\n  File \"/Users/mokshnirvaan/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/modal.py\", line 1324, in _raise_if_unexpected_exit_137\n    raise SandboxLikelyOutOfMemoryError(\n        requested_memory_mb=self._requested_memory_mb(),\n    ) from cause\nharbor.environments.modal.SandboxLikelyOutOfMemoryError: Modal sandbox likely ran out of memory (exit_code=137, requested_memory_mb=32768)\n",
+        "occurred_at": "2026-10-08T21:28:45.018274Z"
+    },
+    "started_at": "2026-10-08T21:02:51.334120Z",
+    "finished_at": "2026-10-08T21:28:46.166153Z",
+    "environment_setup": {
+        "started_at": "2026-10-08T21:02:51.357655Z",
+        "finished_at": "2026-10-08T21:03:09.825982Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-08T21:03:09.826049Z",
+        "finished_at": "2026-10-08T21:03:24.514717Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-08T21:03:24.515337Z",
+        "finished_at": "2026-10-08T21:28:44.626003Z"
+    },
+    "verifier": null,
+    "step_results": null
+}

@@ -1,0 +1,9 @@
+{
+  "reward": 1.0,
+  "speedup_geomean": 452.9255,
+  "dnll_worst": 0.00031,
+  "quality_gate": 1.0,
+  "spearman_min": 0.99998,
+  "keep_agreement_min": 1.0,
+  "speed_credit": 1.0
+}

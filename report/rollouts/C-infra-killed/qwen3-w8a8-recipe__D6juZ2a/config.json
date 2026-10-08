@@ -1,0 +1,15 @@
+{
+    "task": {
+        "path": "tasks/qwen3-w8a8-recipe"
+    },
+    "trial_name": "qwen3-w8a8-recipe__D6juZ2a",
+    "trials_dir": "jobs/qwen3-int8-a10g-rollouts6-20261008-144256",
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "openrouter/openai/gpt-6.1-sol"
+    },
+    "environment": {
+        "type": "modal"
+    },
+    "job_id": "50549851-7c55-475a-a9fb-fed430595742"
+}

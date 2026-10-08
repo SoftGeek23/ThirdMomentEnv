@@ -1,0 +1,55 @@
+{
+ "gpu": "A10G",
+ "note": "recovered from log; per-batch speedups and profiles lost to a render crash",
+ "rows": {
+  "fused-bf16": {
+   "speedup_geomean": 1.035,
+   "dnll_no_wikitext": {
+    "mbpp": -0.001626356103555943,
+    "gsm8k": 8.463171812204215e-05
+   }
+  },
+  "fused-int8-sq0.5-cg": {
+   "speedup_geomean": 1.498,
+   "dnll_no_wikitext": {
+    "mbpp": -0.001449659830186425,
+    "gsm8k": 0.0063602980385478744
+   }
+  },
+  "fused-int8-sq0.8": {
+   "speedup_geomean": 1.495,
+   "dnll_no_wikitext": {
+    "mbpp": -0.007150769233703613,
+    "gsm8k": -0.030848532915115356
+   }
+  },
+  "fused-int8": {
+   "speedup_geomean": 1.495,
+   "dnll_no_wikitext": {
+    "mbpp": 0.011905261898428445,
+    "gsm8k": 0.01898099800460359
+   }
+  },
+  "fused-int8-sq0.5": {
+   "speedup_geomean": 1.488,
+   "dnll_no_wikitext": {
+    "mbpp": -0.001449659830186425,
+    "gsm8k": 0.0063602980385478744
+   }
+  },
+  "fused-int8-sq0.5-ma": {
+   "speedup_geomean": 1.53,
+   "dnll_no_wikitext": {
+    "mbpp": -0.0018830813043485813,
+    "gsm8k": 0.006381327270442604
+   }
+  },
+  "hf-int8": {
+   "speedup_geomean": 1.439,
+   "dnll_no_wikitext": {
+    "mbpp": 0.008239099892174325,
+    "gsm8k": 0.018834912369393896
+   }
+  }
+ }
+}
